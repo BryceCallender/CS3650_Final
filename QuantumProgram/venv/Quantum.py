@@ -39,7 +39,7 @@ for binary, value in counts.items():
         mostCommon = value
         highestBinary = binary
 
-print("The Quantum computer has chosen a number. Try to guess it")
+print("The Quantum computer has chosen a number. Try to guess it in the range of 0 to " + str(pow(2, numOfQubits)-1))
 
 guessed_num = int(highestBinary, 2)
 
