@@ -1,4 +1,5 @@
 from qiskit import *
+# from qiskit.providers.ibmq import least_busy
 
 IBMQ.load_accounts()
 
@@ -24,6 +25,7 @@ circuit.measure(q, c)
 # Use Aer's qasm_simulator
 backend_sim = BasicAer.get_backend('qasm_simulator')
 
+# job = execute(circuit, backend=least_busy(IBMQ.backends(simulator=False)), shots=1024)
 job = execute(circuit, backend_sim, shots=1024)
 
 results = job.result()
